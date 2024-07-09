@@ -60,12 +60,18 @@ def gera_e_valida_cpf():
         if valida_cpf(cpf):
             return cpf
 
-def search():
+def search_fill():
     search_btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[1]/div/main/div/section/form/fieldset[1]/button')
                                                   )
                        ).click()
     
-    time.sleep(2.1)
+    corp_name_input = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div/main/div/section/form/fieldset[2]/div[1]/div/input')
+
+    input_value = corp_name_input.get_attribute('value')
+    if input_value.strip() == "":
+        time.sleep(2.1)
+    else:
+        pass
 
 driver_path = './chromedriver.exe'
 s = Service(driver_path)
@@ -110,7 +116,7 @@ for _ in range(boarding_amount_int):
                                                 )
                     ).send_keys("11.591.040/0006-86")
     
-    search()
+    search_fill()
     
     next_btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[1]/div/main/div/section/form/div/button')
                                                   )
@@ -120,7 +126,7 @@ for _ in range(boarding_amount_int):
                                                 )
                     ).send_keys("11.591.040/0001-71")
     
-    search()
+    search_fill()
     
     next2_btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[1]/div/main/div/section/form/div/button[2]')
                                                   )
@@ -131,7 +137,7 @@ for _ in range(boarding_amount_int):
                                                 )
                     ).send_keys("33787071865 ")
     
-    search()
+    search_fill()
     
     next2_btn.click()
     
