@@ -122,7 +122,7 @@ for _ in range(boarding_amount_int):
                                                   )
                        ).click()
     
-    cnp2_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[1]/div/main/div/section/form/fieldset[1]/div/div/input')
+    cnpj2_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[1]/div/main/div/section/form/fieldset[1]/div/div/input')
                                                 )
                     ).send_keys("11.591.040/0001-71")
     

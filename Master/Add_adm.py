@@ -56,24 +56,24 @@ for _ in range(create_adm_amount_int):
                                                   )
                        ).click()
     
-    name_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[1]/div/div/main/form/div[1]/div/input')
+    name_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="new-admin-form"]/div[1]/div/input')
                                                   )
-                       ).send_keys(f'Usuarios {num}')
+                       ).send_keys(f'Usuario {num}')
     
-    email_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[1]/div/div/main/form/div[1]/div/input')
+    email_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="new-admin-form"]/div[2]/div/input')
                                                   )
                        ).send_keys(f'emailtesteauto{num}@gmail.com')
     
-    sector_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[1]/div/div/main/form/div[1]/div/input')
+    sector_iput = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="new-admin-form"]/div[3]/div/input')
                                                   )
                        ).send_keys(f'Setor {num}')
     
     perms_dropdown = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[1]/div/div/main/form/div[4]/div[1]/div')
                                                   )
                        ).click()
-    
+
     branch_click = wait.until(EC.element_to_be_clickable(
-        (By.XPATH, f"//div[contains(text(), 'Master')]")
+        (By.XPATH, f"//div[2]/div/div")
         )
         ).click()
     
