@@ -1,6 +1,6 @@
 # Install
 1. python
-2. Open terminal and type "pip install tk selenium python-dotenv"
+2. Open terminal and type "pip install tkinter customtkinter selenium python-dotenv"
 
 # Using it 
 1. Open the project on you preferd IDE 
