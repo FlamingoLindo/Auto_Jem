@@ -8,9 +8,6 @@ from selenium.webdriver.common.by import By
 import time
 from dotenv import load_dotenv
 import os
-import random
-import pyautogui
-import sys
 load_dotenv()
 
 def get_user_input(prompt):
